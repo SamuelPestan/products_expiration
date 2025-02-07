@@ -3,12 +3,12 @@
         <field name="name">product.expiration.tree</field>
         <field name="model">product.expiration</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="product_id"/>
                 <field name="expiration_date"/>
                 <field name="quantity"/>
                 <field name="notification_sent"/>
-            </tree>
+            </list>
         </field>
     </record>
 
