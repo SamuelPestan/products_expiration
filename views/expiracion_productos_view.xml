@@ -22,6 +22,7 @@
                         <field name="product_id"/>
                         <field name="expiration_date"/>
                         <field name="quantity"/>
+                        <field name="notification_sent"/>
                     </group>
                 </sheet>
             </form>
@@ -31,7 +32,8 @@
     <menuitem id="menu_product_expiration"
               name="Control de Expiración de Productos"
               parent="stock.menu_stock_inventory_control"
-              action="action_product_expiration"/>
+              action="action_product_expiration"
+              model="ir.ui.menu"/>
 
     <record id="action_product_expiration" model="ir.actions.act_window">
         <field name="name">Productos con Expiración</field>
