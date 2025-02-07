@@ -58,6 +58,7 @@ Odoo enviará notificaciones automáticas cuando un producto esté próximo a ve
 products_expiration/
 │── models/
 │   ├── product_expiration.py  # Modelo de expiración de productos
+│   ├── __init__.py  # Inicialización del modelo
 │── views/
 │   ├── expiration_product_view.xml  # Definición de las vistas
 │── data/
