@@ -55,7 +55,7 @@ Odoo enviará notificaciones automáticas cuando un producto esté próximo a ve
 ## 📂 Estructura del Proyecto
 
 ```bash
-control_expiracion_productos/
+products_expiration/
 │── models/
 │   ├── product_expiration.py  # Modelo de expiración de productos
 │── views/
