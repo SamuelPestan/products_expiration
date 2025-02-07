@@ -19,7 +19,7 @@ Clona este repositorio dentro de la carpeta de módulos de Odoo:
 
 ```bash
 cd /ruta/de/tu/odoo/addons/
-git clone https://github.com/tuusuario/products_expiration.git
+git clone https://github.com/SamuelPestan/products_expiration.git
 ```
 
 Reinicia el servidor de Odoo:
