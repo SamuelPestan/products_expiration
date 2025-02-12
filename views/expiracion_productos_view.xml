@@ -1,43 +1,45 @@
 <odoo>
-    <record id="view_product_expiration_tree" model="ir.ui.view">
-        <field name="name">product.expiration.tree</field>
-        <field name="model">product.expiration</field>
-        <field name="arch" type="xml">
-            <list>
-                <field name="product_id"/>
-                <field name="expiration_date"/>
-                <field name="quantity"/>
-                <field name="notification_sent"/>
-            </list>
-        </field>
-    </record>
+    <data>
+        <record id="view_product_expiration_tree" model="ir.ui.view">
+            <field name="name">product.expiration.tree</field>
+            <field name="model">product.expiration</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="product_id"/>
+                    <field name="expiration_date"/>
+                    <field name="quantity"/>
+                    <field name="notification_sent"/>
+                </list>
+            </field>
+        </record>
 
-    <record id="view_product_expiration_form" model="ir.ui.view">
-        <field name="name">product.expiration.form</field>
-        <field name="model">product.expiration</field>
-        <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <group>
-                        <field name="product_id"/>
-                        <field name="expiration_date"/>
-                        <field name="quantity"/>
-                        <field name="notification_sent"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+        <record id="view_product_expiration_form" model="ir.ui.view">
+            <field name="name">product.expiration.form</field>
+            <field name="model">product.expiration</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="product_id"/>
+                            <field name="expiration_date"/>
+                            <field name="quantity"/>
+                            <field name="notification_sent"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
-    <menuitem id="menu_product_expiration"
-              name="Control de Expiración de Productos"
-              parent="stock.menu_stock_inventory_control"
-              action="action_product_expiration"
-              model="ir.ui.menu"/>
+        <menuitem id="menu_product_expiration"
+                name="Control de Expiración de Productos"
+                parent="stock.menu_stock_inventory_control"
+                action="action_product_expiration"
+                model="ir.ui.menu"/>
 
-    <record id="action_product_expiration" model="ir.actions.act_window">
-        <field name="name">Productos con Expiración</field>
-        <field name="res_model">product.expiration</field>
-        <field name="view_mode">tree,form</field>
-    </record>
+        <record id="action_product_expiration" model="ir.actions.act_window">
+            <field name="name">Productos con Expiración</field>
+            <field name="res_model">product.expiration</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>  
 </odoo>
