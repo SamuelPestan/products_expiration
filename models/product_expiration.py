@@ -5,7 +5,7 @@ class ProductExpiration(models.Model):
     _name = 'product.expiration'
     _description = 'Registro de Expiración de Productos'
 
-    product_id = fields.Many2one('product.template', string='Producto', required=True)
+    product_id = fields.Many2one('product.product', string='Producto', required=True)
     expiration_date = fields.Date(string='Fecha de Expiración', required=True)
     quantity = fields.Float(string='Cantidad', required=True)
     notification_sent = fields.Boolean(string='Notificación Enviada', default=False)
