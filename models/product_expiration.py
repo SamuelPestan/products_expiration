@@ -24,11 +24,12 @@ class ProductExpiration(models.Model):
                 if record.expiration_date <= today + timedelta(days=7):
                     # Llamar a la función que envía la notificación
                     self._send_expiration_notification(record)
-
-    def _send_expiration_notification(self, record):
-        """ Enviar notificación de expiración a los responsables. """
+"""
+def _send_expiration_notification(self, record):
         # Aquí puedes enviar un correo o crear un mensaje interno
         record.notification_sent = True
         # Notificación por correo o recordatorio
         template = self.env.ref('mail.email_template_data_warning_product_expiry')
         template.send_mail(record.id, force_send=True)
+"""
+    
