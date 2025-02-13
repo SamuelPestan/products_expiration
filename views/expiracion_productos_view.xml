@@ -34,8 +34,7 @@
         <menuitem id="menu_product_expiration"
                 name="Control de Expiración de Productos"
                 parent="stock.menu_stock_inventory_control"
-                action="action_product_expiration"
-                model="ir.ui.menu"/>
+                action="action_product_expiration" />
 
         <record id="action_product_expiration" model="ir.actions.act_window">
             <field name="name">Productos con Expiración</field>
