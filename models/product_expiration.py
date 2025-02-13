@@ -21,9 +21,14 @@ class ProductExpiration(models.Model):
         for record in self:
             if record.expiration_date and not record.notification_sent:
                 today = fields.Date.today()
-                if record.expiration_date <= today + timedelta(days=7):
+                expiration_warning_date = today + timedelta(days=7)
+                if record.expiration_date <= expiration_warning_date:
                     # Llamar a la función que envía la notificación
                     self._send_expiration_notification(record)
+
+    def check_expiration_in_cron(self):
+        """ Método llamado por el cron job para verificar expiraciones. """
+        self._check_expiration()
 
     def _send_expiration_notification(self, record):
         """ Enviar notificación de expiración a los responsables. """
