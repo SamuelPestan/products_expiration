@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <odoo>
     <data>
-        <record id="view_product_expiration_tree" model="ir.ui.view">
-            <field name="name">product.expiration.tree</field>
+        <record id="view_product_expiration_list" model="ir.ui.view">
+            <field name="name">product.expiration.list</field>
             <field name="model">product.expiration</field>
             <field name="arch" type="xml">
                 <list>
