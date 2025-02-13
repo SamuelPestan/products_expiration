@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <odoo>
     <data>
+        <!-- Acción para las vistas de Expiración -->
         <record id="action_product_expiration" model="ir.actions.act_window">
             <field name="name">Productos con Expiración</field>
             <field name="res_model">product.expiration</field>
@@ -8,11 +9,19 @@
             <field name="view_id" ref="view_product_expiration_list" />
         </record>
 
-        <menuitem id="menu_product_expiration"
-                name="Control de Expiración de Productos"
-                parent="stock.menu_stock_inventory_control"
-                action="action_product_expiration" />
+        <!-- Menú Principal Independiente -->
+        <menuitem id="menu_control_expiration_root"
+                  name="Control de Expiración de Productos"
+                  sequence="10"/>
 
+        <!-- Submenú de Expiraciones -->
+        <menuitem id="menu_product_expiration"
+                  name="Gestionar Expiraciones"
+                  parent="menu_control_expiration_root"
+                  action="action_product_expiration"
+                  sequence="1"/>
+
+        <!-- Vista de Lista de Expiraciones -->
         <record id="view_product_expiration_list" model="ir.ui.view">
             <field name="name">product.expiration.list</field>
             <field name="model">product.expiration</field>
@@ -26,6 +35,7 @@
             </field>
         </record>
 
+        <!-- Vista de Formulario para Registro de Expiraciones -->
         <record id="view_product_expiration_form" model="ir.ui.view">
             <field name="name">product.expiration.form</field>
             <field name="model">product.expiration</field>
