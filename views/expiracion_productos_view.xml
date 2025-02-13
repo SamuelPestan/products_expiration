@@ -5,6 +5,7 @@
             <field name="name">Productos con Expiración</field>
             <field name="res_model">product.expiration</field>
             <field name="view_mode">list,form</field>
+             <field name="view_id" ref="view_product_expiration_list" />
         </record>
 
         <menuitem id="menu_product_expiration"
