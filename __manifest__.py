@@ -6,6 +6,7 @@
     'author': 'Samuel Pestana',
     'depends': ['base', 'stock', 'product'],
     'data': [
+        'security/ir.model.access.csv',
         'views/expiracion_productos_view.xml',
         'data/expiracion_cron.xml',
     ],
