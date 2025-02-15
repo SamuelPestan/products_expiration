@@ -35,3 +35,24 @@ sudo systemctl restart odoo
 - Activa el Modo Desarrollador en Odoo.
 - Ve a **Apps** y haz clic en **Actualizar lista de aplicaciones**.
 - Busca **Control de Expiración de Productos** y haz clic en **Instalar**.
+
+## 📂 Estructura del proyecto
+
+``` bash
+products_expiration/                 # Carpeta principal del módulo
+│── __init__.py                       # Archivo para definir los módulos a cargar
+│── __manifest__.py                    # Archivo de descripción del módulo
+│
+├── models/                           # Modelos de datos
+│   │── __init__.py                    # Importación de modelos
+│   │── product_expiration.py           # Modelo principal de expiración de productos
+│
+├── views/                            # Vistas del módulo
+│   │── expiracion_productos_view.xml  # Definición de las vistas del módulo
+│
+├── data/                             # Datos iniciales y cron jobs
+│   │── expiracion_cron.xml            # Configuración del cron job
+│
+├── security/                         # Reglas de acceso
+│   │── ir.model.access.csv            # Permisos de seguridad
+```
